@@ -1,0 +1,51 @@
+<?php include 'includes/header.php'?>
+<!-- header ends --> 
+        
+<!-- START LEFT COL -->
+<h3>ABOUT US</h3>
+
+    <p>Description of the Pint And Ladle goes here.</p>
+
+<!-- END LEFT COL -->
+
+<!-- START RIGHT COL -->
+<aside>
+<div class="indent">
+
+<form action="includes/simplerMailto.php" method="POST">
+<p>Name</p> <input type="text" name="name">
+<p>Email</p> <input type="text" name="email">
+<p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+<input type="submit" value="Send"><input type="reset" value="Clear">
+</form>
+    
+<!-- OLD CONTACT FORMS -->
+
+<?php
+  /*
+   * Below are 2 different forms to be re-used       
+   * 
+   * Only use one at a time, comment out the other!       
+   *
+   */
+
+  include 'includes/contact_include.php'; #site keys & code here
+
+  $toAddress = "bigmagoona@gmail.com";  //place your/your client's email address here
+  $toName = "Lucas Gonczy"; //place your client's name here
+  $website = "The Pint And Ladle";  //place NAME of your client's website
+
+  echo loadContact('simple.php');#demonstrates a simple contact form
+  //echo loadContact('multiple.php');#demonstrates multiple form elements
+
+?>
+
+
+  
+
+</aside>
+</div>
+<!-- END RIGHT COL -->
+ 
+<!-- START Footer -->
+<?php include 'includes/footer.php'?>
